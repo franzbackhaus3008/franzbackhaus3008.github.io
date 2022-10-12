@@ -1,0 +1,47 @@
+<?wsx5
+function existKey(key, textDefault, type){
+     if(parameters.hasOwnProperty(key)){
+         if(type === undefined){
+             type = "value";
+         }
+         return parameters[key][type];    
+     }
+     else if(textDefault !== undefined)
+        return textDefault;
+     else
+        return "";
+    }
+?>
+<?wsx5 document.write("#" + currentObject.id) ?> {
+	width: 100%;
+}
+<?wsx5 document.write("#" + currentObject.id) ?> .cd-headline {
+	display: block;
+	font-family: '<?wsx5 document.write(parameters.title_font.family) ?>';
+	font-size: <?wsx5 document.write(parameters.title_font.size) ?>px;
+	line-height: <?wsx5 document.write(parameters.title_font.size + 8) ?>px;
+	color: <?wsx5 document.write(parameters.font_color.value) ?>;
+	font-style: <?wsx5 document.write(parameters.title_font.italic ? "italic" : "normal") ?>;
+	font-weight: <?wsx5 document.write(parameters.title_font.bold ? "bold" : "normal") ?>;
+}
+
+<?wsx5 document.write("#" + currentObject.id) ?> .cd-headline b,
+<?wsx5 document.write("#" + currentObject.id) ?> .cd-headline i,
+<?wsx5 document.write("#" + currentObject.id) ?> .cd-headline em {
+	
+	font-family: '<?wsx5 document.write(parameters.title_font.family) ?>';
+	font-size: <?wsx5 document.write(parameters.title_font.size) ?>px;
+	line-height: <?wsx5 document.write(parameters.title_font.size + 8) ?>px;
+	color: <?wsx5 document.write(existKey("font_animate_color")) ?>;
+	font-style: <?wsx5 document.write(parameters.title_font.italic ? "italic" : "normal") ?> !important;
+	font-weight: <?wsx5 document.write(parameters.title_font.bold ? "bold" : "normal") ?>;
+}
+
+/* Loading bar color */
+<?wsx5 document.write("#" + currentObject.id) ?> .cd-headline.loading-bar .cd-words-wrapper::after {
+	background-color: <?wsx5 document.write(existKey("font_animate_color")) ?>;
+}
+
+<?wsx5 document.write("#" + currentObject.id) ?> .cd-intro {
+	text-align: <?wsx5 document.write(parameters.alignment.value) ?>;
+}

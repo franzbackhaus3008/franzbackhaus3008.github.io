@@ -1,0 +1,34 @@
+
+#pluginAppObj_20 {
+	width: 100%;
+}
+#pluginAppObj_20 .cd-headline {
+	display: block;
+	font-family: 'Raleway';
+	font-size: 48px;
+	line-height: 56px;
+	color: rgba(254, 186, 23, 1);
+	font-style: normal;
+	font-weight: normal;
+}
+
+#pluginAppObj_20 .cd-headline b,
+#pluginAppObj_20 .cd-headline i,
+#pluginAppObj_20 .cd-headline em {
+	
+	font-family: 'Raleway';
+	font-size: 48px;
+	line-height: 56px;
+	color: rgba(0, 0, 0, 1);
+	font-style: normal !important;
+	font-weight: normal;
+}
+
+/* Loading bar color */
+#pluginAppObj_20 .cd-headline.loading-bar .cd-words-wrapper::after {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+#pluginAppObj_20 .cd-intro {
+	text-align: center;
+}
